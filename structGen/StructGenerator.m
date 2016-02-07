@@ -14,10 +14,10 @@
     NSString *hString = [StructGenerator generateHStruct:name members:members];
     NSString *mString = [StructGenerator generateMStruct:name members:members];
     NSString *output = [NSString stringWithFormat:@"\n"
-                        @".h file\n"
+                        @"\\\\ .h file\n"
                         @"%@\n"
                         @"\n"
-                        @".m file\n"
+                        @"\\\\ .m file\n"
                         @"%@\n"
                         @"\n",
                         hString, mString];
