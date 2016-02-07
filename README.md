@@ -29,3 +29,25 @@ const struct MyStruct MyStruct = {
 	.zip = @"83702",
 };
 ```
+
+You can insert spaces like so:
+
+```
+structGen MyStruct "home,123 jerk st." zip,94116
+```
+
+output:
+
+```
+\\ .h file
+extern const struct MyStruct {
+	__unsafe_unretained NSString *home;
+	__unsafe_unretained NSString *zip;
+} MyStruct;
+
+\\ .m file
+const struct MyStruct MyStruct = {
+	.home = @"123 jerk st.",
+	.zip = @"94116",
+};
+```
